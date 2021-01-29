@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    tools:context=".authentication.view.LogInFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/card_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/name"
+            android:text="@string/name"
+            android:textColor="@color/lightGrey2" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="username"
+            android:backgroundTint="@color/lightGrey2"
+            android:inputType="text"
+            android:textColor="@color/lightGreen"
+            android:textCursorDrawable="@drawable/green_cursor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/input_margin"
+            android:labelFor="@+id/email"
+            android:text="@string/email"
+            android:textColor="@color/lightGrey2" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="email"
+            android:backgroundTint="@color/lightGrey2"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/lightGreen"
+            android:textCursorDrawable="@drawable/green_cursor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/input_margin"
+            android:labelFor="@+id/password"
+            android:text="@string/password"
+            android:textColor="@color/lightGrey2" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="password"
+            android:backgroundTint="@color/lightGrey2"
+            android:inputType="textPassword"
+            android:textColor="@color/lightGreen"
+            android:textCursorDrawable="@drawable/green_cursor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/input_margin"
+            android:labelFor="@+id/repeat_password"
+            android:text="@string/repeat_password"
+            android:textColor="@color/lightGrey2" />
+
+        <EditText
+            android:id="@+id/repeat_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="password"
+            android:backgroundTint="@color/lightGrey2"
+            android:inputType="textPassword"
+            android:textColor="@color/lightGreen"
+            android:textCursorDrawable="@drawable/green_cursor" />
+
+        <Button
+            android:id="@+id/create_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin"
+            android:backgroundTint="@color/red"
+            android:text="@string/create_account"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

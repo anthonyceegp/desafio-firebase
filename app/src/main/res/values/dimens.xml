@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_corner_radius">10dp</dimen>
+    <dimen name="game_card_image_height">156dp</dimen>
+    <dimen name="title_size">16sp</dimen>
+    <dimen name="subtitle_size">14sp</dimen>
+    <dimen name="card_margin">16dp</dimen>
+    <dimen name="input_margin">8dp</dimen>
+    <dimen name="button_margin">48dp</dimen>
+    <dimen name="search_margin">8dp</dimen>
+    <dimen name="toolbar_image_height">250dp</dimen>
+    <dimen name="body_text_size">16sp</dimen>
+    <dimen name="upload_button_size">150dp</dimen>
+    <dimen name="upload_button_border_width">4dp</dimen>
+    <dimen name="upload_button_half_size">75dp</dimen>
+    <dimen name="upload_button_elevation">2dp</dimen>
+</resources>

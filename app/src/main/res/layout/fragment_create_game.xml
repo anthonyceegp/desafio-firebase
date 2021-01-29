@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".creategame.CreateGameFragment">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/upload_button"
+        android:layout_width="@dimen/upload_button_size"
+        android:layout_height="@dimen/upload_button_size"
+        android:elevation="@dimen/upload_button_elevation"
+        android:src="@drawable/ic_upload_button"
+        app:civ_border_color="@color/red"
+        app:civ_border_width="@dimen/upload_button_border_width"
+        app:layout_constraintBottom_toTopOf="@id/card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/card" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/card_margin"
+        android:layout_marginTop="@dimen/upload_button_half_size"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/card_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/upload_button_half_size"
+                android:labelFor="@+id/name"
+                android:text="@string/name"
+                android:textColor="@color/lightGrey2" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="name"
+                android:backgroundTint="@color/lightGrey2"
+                android:inputType="text"
+                android:textColor="@color/lightGreen"
+                android:textCursorDrawable="@drawable/green_cursor" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/input_margin"
+                android:labelFor="@+id/created_at"
+                android:text="@string/created_at"
+                android:textColor="@color/lightGrey2" />
+
+            <EditText
+                android:id="@+id/created_at"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="year"
+                android:backgroundTint="@color/lightGrey2"
+                android:inputType="text"
+                android:textColor="@color/lightGreen"
+                android:textCursorDrawable="@drawable/green_cursor" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/input_margin"
+                android:labelFor="@id/description"
+                android:text="@string/description"
+                android:textColor="@color/lightGrey2" />
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="description"
+                android:backgroundTint="@color/lightGrey2"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:textColor="@color/lightGreen"
+                android:textCursorDrawable="@drawable/green_cursor" />
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/button_margin"
+                android:backgroundTint="@color/red"
+                android:text="@string/save_game"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

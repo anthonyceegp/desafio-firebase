@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/gamesFragment">
+
+    <fragment
+        android:id="@+id/gamesFragment"
+        android:name="com.anthony.desafiofirebase.games.view.GamesFragment"
+        android:label="fragment_games"
+        tools:layout="@layout/fragment_games" >
+        <action
+            android:id="@+id/action_gamesFragment_to_gameDetailFragment"
+            app:destination="@id/gameDetailFragment" />
+        <action
+            android:id="@+id/action_gamesFragment_to_createGameFragment"
+            app:destination="@id/createGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameDetailFragment"
+        android:name="com.anthony.desafiofirebase.gamedetail.GameDetailFragment"
+        tools:layout="@layout/fragment_game_detail" >
+        <action
+            android:id="@+id/action_gameDetailFragment_to_editGameFragment"
+            app:destination="@id/editGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createGameFragment"
+        android:name="com.anthony.desafiofirebase.creategame.CreateGameFragment"
+        android:label="fragment_create_game"
+        tools:layout="@layout/fragment_create_game" />
+    <fragment
+        android:id="@+id/editGameFragment"
+        android:name="com.anthony.desafiofirebase.editgame.EditGameFragment"
+        android:label="EditGameFragment" />
+</navigation>

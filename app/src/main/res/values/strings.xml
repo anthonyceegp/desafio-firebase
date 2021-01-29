@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">DesafioFirebase</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="password">Password</string>
+    <string name="remember">Remember</string>
+    <string name="log_in">LOG IN</string>
+    <string name="create_account">Create account</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="required_field">This field is required!</string>
+    <string name="password_pattern_error">Password must contain at least one digit [0\-9]\nOne lowercase character [a\-z]\nOne uppercase character [A\-Z]\nOne special character like ! @ # &amp; ( )\n8 characters and a maximum of 20 characters</string>
+    <string name="password_match">Password and repeat password don\'t match</string>
+    <string name="auth_failed">Authentication failed</string>
+    <string name="preference_remember">com.anthony.desafiofirebase.remember</string>
+    <string name="game_picture">Game picture</string>
+    <string name="search_games">Search Games</string>
+    <string name="created_at">Created at</string>
+    <string name="description">Description</string>
+    <string name="save_game">SAVE GAME</string>
+    <string name="image_required">You must upload an image</string>
+    <string name="search_hint">Search Games</string>
+    <string name="voice_search">Voice search</string>
+    <string name="speak_now">Speak now…</string>
+    <string name="speech_not_available">Speech recognition not available!</string>
+    <string name="launch_year">Launch: %1$s</string>
+</resources>
