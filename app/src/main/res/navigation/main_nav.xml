@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_gamesFragment_to_createGameFragment"
             app:destination="@id/createGameFragment" />
+        <action
+            android:id="@+id/action_gamesFragment_to_authenticationActivity"
+            app:destination="@id/authenticationActivity" />
     </fragment>
     <fragment
         android:id="@+id/gameDetailFragment"
@@ -34,4 +37,9 @@
         android:id="@+id/editGameFragment"
         android:name="com.anthony.desafiofirebase.editgame.EditGameFragment"
         android:label="EditGameFragment" />
+    <activity
+        android:id="@+id/authenticationActivity"
+        android:name="com.anthony.desafiofirebase.authentication.view.AuthenticationActivity"
+        android:label="activity_authentication"
+        tools:layout="@layout/activity_authentication" />
 </navigation>

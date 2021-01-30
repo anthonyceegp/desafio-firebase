@@ -97,15 +97,6 @@ class CreateGameFragment : Fragment() {
 
         gamesViewModel.uploadSuccess.observe(viewLifecycleOwner, { uploadSuccess ->
             if (uploadSuccess) {
-                gamesViewModel.createSuccess.observe(viewLifecycleOwner, { createSuccess ->
-                    if (createSuccess) {
-                        Toast.makeText(context, "Successfully created!", Toast.LENGTH_SHORT).show()
-                        findNavController().popBackStack()
-                    } else {
-                        Toast.makeText(context, "Create failed!", Toast.LENGTH_SHORT).show()
-                    }
-                })
-
                 gamesViewModel.createGame(
                     pathString,
                     name.text.toString(),
@@ -114,6 +105,15 @@ class CreateGameFragment : Fragment() {
                 )
             } else {
                 Toast.makeText(context, "Image upload failed!", Toast.LENGTH_SHORT).show()
+            }
+        })
+
+        gamesViewModel.createSuccess.observe(viewLifecycleOwner, { createSuccess ->
+            if (createSuccess) {
+                Toast.makeText(context, "Successfully created!", Toast.LENGTH_SHORT).show()
+                findNavController().popBackStack()
+            } else {
+                Toast.makeText(context, "Create failed!", Toast.LENGTH_SHORT).show()
             }
         })
 

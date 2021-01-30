@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:autofillHints="year"
                 android:backgroundTint="@color/lightGrey2"
-                android:inputType="text"
+                android:inputType="number"
                 android:textColor="@color/lightGreen"
                 android:textCursorDrawable="@drawable/green_cursor" />
 

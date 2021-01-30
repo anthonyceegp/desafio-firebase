@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/input_margin"
             android:labelFor="@+id/password"
-            android:text="@string/name"
+            android:text="@string/password"
             android:textColor="@color/lightGrey2" />
 
         <EditText

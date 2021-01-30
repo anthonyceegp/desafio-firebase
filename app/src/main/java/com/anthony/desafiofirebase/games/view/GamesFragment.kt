@@ -26,6 +26,7 @@ import com.anthony.desafiofirebase.games.viewmodel.GamesViewModel
 import com.anthony.desafiofirebase.utils.Constant
 import com.anthony.desafiofirebase.utils.GridLayoutDecoration
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.firebase.auth.FirebaseAuth
 import java.util.*
 
 class GamesFragment : Fragment(), OnGameClickListener {
@@ -36,6 +37,8 @@ class GamesFragment : Fragment(), OnGameClickListener {
     private lateinit var gamesAdapter: GamesAdapter
     private lateinit var gridLayoutManager: GridLayoutManager
     private lateinit var createButton: FloatingActionButton
+    private lateinit var signOutButton: FloatingActionButton
+
     private lateinit var handler: Handler
 
     private val gamesViewModel: GamesViewModel by navGraphViewModels(R.id.main_nav)
@@ -64,6 +67,13 @@ class GamesFragment : Fragment(), OnGameClickListener {
         createButton = view.findViewById(R.id.create_button)
         createButton.setOnClickListener {
             findNavController().navigate(R.id.createGameFragment)
+        }
+
+        signOutButton = view.findViewById((R.id.sign_out_button))
+        signOutButton.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            findNavController().navigate(R.id.authenticationActivity)
+            requireActivity().finish()
         }
     }
 

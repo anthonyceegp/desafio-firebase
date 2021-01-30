@@ -20,7 +20,7 @@
             android:layout_height="@dimen/game_card_image_height"
             android:contentDescription="@string/game_picture"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/ic_launcher_background" />
+            tools:srcCompat="@drawable/ic_launcher_background" />
 
         <LinearLayout
             android:layout_width="match_parent"

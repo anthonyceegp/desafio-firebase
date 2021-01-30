@@ -50,7 +50,7 @@ class GamesViewModel : ViewModel() {
                 }
             })
         } else {
-            games.value = if (textFilter == null) {
+            games.value = if (textFilter.isNullOrBlank()) {
                 gamesAux
             } else {
                 filteredGames
@@ -104,10 +104,10 @@ class GamesViewModel : ViewModel() {
     fun applyFilter(text: String?) {
         if (textFilter != text) {
             textFilter = text
-            filteredGames = if (textFilter != null) {
-                gamesAux.filter { g -> g.name.startsWith(textFilter!!, true) }
-            } else {
+            filteredGames = if (textFilter.isNullOrBlank()) {
                 gamesAux
+            } else {
+                gamesAux.filter { g -> g.name.startsWith(textFilter!!, true) }
             }
 
             games.value = filteredGames
